@@ -84,16 +84,16 @@ public class ManualDriveActivity extends Activity {
             // We need to do this outside of for because of else clause
             // which cant be determined before the full list of pointers is itterated
             if (leftIsHeld) {
-                left_throttle.setBackgroundColor(Color.GREEN);
+                left_throttle.setBackgroundColor(Color.parseColor("#D3D9C7"));
             } else {
-               left_throttle.setBackgroundColor(Color.RED);
+               left_throttle.setBackgroundColor(Color.parseColor("#56878C"));
                 left_speed = 0;
             }
 
             if (rightIsHeld) {
-                right_throttle.setBackgroundColor(Color.GREEN);
+                right_throttle.setBackgroundColor(Color.parseColor("#D3D9C7"));
             } else {
-                right_throttle.setBackgroundColor(Color.RED);
+                right_throttle.setBackgroundColor(Color.parseColor("#56878C"));
                 right_speed = 0;
             }
 

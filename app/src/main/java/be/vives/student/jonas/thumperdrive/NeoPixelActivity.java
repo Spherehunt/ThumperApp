@@ -36,7 +36,6 @@ public class NeoPixelActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_neo_pixel);
     }
 
@@ -99,7 +98,8 @@ public class NeoPixelActivity extends Activity {
 
         int delay = ((SeekBar) findViewById(R.id.DelaySeekBar)).getProgress();
 
-
+        ImageView ColorPreview = ((ImageView)findViewById(R.id.ColorPreview));
+        ColorPreview.setBackgroundColor(Color.rgb(red,green,blue));
 
         NeoPixelColorEffect color = new NeoPixelColorEffect(red,green,blue);
 
