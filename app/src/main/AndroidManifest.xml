@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    package="be.vives.student.jonas.thumperdrive" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name=".MainActivity" >
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AboutActivity"
+            android:theme="@style/generalnotitle"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ManualDriveActivity"
+            android:theme="@style/generalnotitle"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity android:name=".AutomaticDriveActivity"
+            android:theme="@style/generalnotitle"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity android:name=".NeoPixelActivity"
+            android:theme="@style/generalnotitle"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:theme="@style/generalnotitle"
+            android:label="@string/title_activity_settings"
+            android:screenOrientation="portrait">
+        </activity>
+    </application>
+
+</manifest>

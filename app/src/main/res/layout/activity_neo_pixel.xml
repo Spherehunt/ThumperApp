@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="5dp"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="be.vives.student.jonas.thumperdrive.NeoPixelActivity"
+    android:background="#080f26">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/NeoPxlStringInfo"
+        android:id="@+id/NeoPxlInfotxtfield"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:background="#021d40"
+        android:textColor="#d3d9c7"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/NeoPxlColor"
+        android:id="@+id/NeoPxlClrtxtfield"
+        android:textSize="20sp"
+        android:textColor="#d3d9c7"
+        android:background="#021d40"
+        android:layout_below="@+id/button"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="26dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/NeoPxlGetBtn"
+        android:id="@+id/button"
+        android:layout_marginTop="33dp"
+        android:textColor="#d3d9c7"
+        android:background="#7f56878c"
+        android:layout_below="@+id/textView8"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:onClick="onGetClick"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/NeoPxlPostBtn"
+        android:id="@+id/button2"
+        android:textColor="#d3d9c7"
+        android:background="#7f56878c"
+        android:onClick="onSetNeoPixelColorClick"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/PxlNumber"
+        android:id="@+id/textView8"
+        android:layout_marginTop="43dp"
+        android:textColor="#d3d9c7"
+        android:layout_below="@+id/NeoPxlInfotxtfield"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/NumberofPixelsinput"
+        android:text="@string/PxlNumberVal"
+        android:textColor="#d3d9c7"
+        android:layout_alignBaseline="@+id/textView8"
+        android:layout_alignBottom="@+id/textView8"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:id="@+id/ColorPreview"
+        android:layout_above="@+id/button2"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/button2" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/RedSeekBar"
+        android:max="255"
+        android:indeterminate="false"
+        android:layout_below="@+id/NeoPxlClrtxtfield"
+        android:layout_marginTop="10dp"
+        android:layout_alignEnd="@+id/NeoPxlClrtxtfield"
+        android:layout_toEndOf="@+id/GreenSBLabel"
+        android:progress="5" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/GreenSeekBar"
+        android:layout_below="@+id/RedSeekBar"
+        android:layout_marginTop="31dp"
+        android:layout_alignEnd="@+id/RedSeekBar"
+        android:max="255"
+        android:indeterminate="false"
+        android:layout_alignStart="@+id/RedSeekBar"
+        android:progress="5" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BlueSeekBar"
+        android:indeterminate="false"
+        android:max="255"
+        android:layout_below="@+id/GreenSeekBar"
+        android:layout_marginTop="34dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/GreenSeekBar"
+        android:progress="5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/RedSBLabelTxt"
+        android:id="@+id/RedSBLabel"
+        android:textColor="#d3d9c7"
+        android:layout_alignTop="@+id/RedSeekBar"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/GreenSBLabelTxt"
+        android:id="@+id/GreenSBLabel"
+        android:layout_alignTop="@+id/GreenSeekBar"
+        android:layout_alignParentStart="true"
+        android:textColor="#d3d9c7" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/BlueSBLabelTxt"
+        android:id="@+id/BlueSBLabel"
+        android:textColor="#d3d9c7"
+        android:layout_alignTop="@+id/BlueSeekBar"
+        android:layout_alignParentStart="true" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/DelaySeekBar"
+        android:layout_marginTop="27dp"
+        android:max="250"
+        android:progress="10"
+        android:indeterminate="false"
+        android:layout_below="@+id/BlueSeekBar"
+        android:layout_alignStart="@+id/BlueSeekBar"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/DelaySBLabelTxt"
+        android:id="@+id/DelaySBLabel"
+        android:textColor="#d3d9c7"
+        android:layout_alignTop="@+id/DelaySeekBar"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
